@@ -3,11 +3,38 @@ import csv
 import json
 import urllib.request
 import math
+import itertools
 
 #used for hierarchical clustering portion
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, linkage
 import numpy as np
+
+#Extra function outside of the loop to calculate the distance/duration between two locations
+def calculate_difference(loc_list, lookup_dict,diff_type = 'distance'):
+	#for each transition, find the distance between the points then add them up and return it
+	return_difference = 0
+	for i in range(0,len(loc_list)-1):
+		#note that we don't need the nested loops since they're only going in one direction
+		loc_1 = loc_list[i]
+		loc_2 = loc_list[i+1]
+		
+		#reassign values to be more readable
+		lat_1 = lookup_dict[loc_1][0]
+		long_1 = lookup_dict[loc_1][1]
+		lat_2 = lookup_dict[loc_2][0]
+		long_2 = lookup_dict[loc_2][1]
+	
+		#just copy the code from the other url lookup
+		req = urllib.request.Request('http://router.project-osrm.org/route/v1/driving/'+str(lat_1)+','+str(long_1)+';'+str(lat_2)+','+str(long_2)+'?overview=false')
+				
+		#Extract the time (duration) instead of distance (returns in seconds)
+		with urllib.request.urlopen(req) as response:
+			result = json.loads(response.read().decode('utf-8'))
+			return_difference = result['routes'][0][diff_type]
+			
+	return return_difference
+
 
 #This function takes in a list of keys and the corresponding dictionary of 
 #their lat long coordinates to compute a path between them of shortest distance
@@ -23,6 +50,27 @@ def determine_location_order(location_list,lookup_dict):
 	#Another alternative is to brute force all permutations of the location_list
 	#but that is computationally expensive
 	
+	#Brute force method step 1: Generate a list of lists of permutations
+	full_permutation_list = list(itertools.permutations(location_list))
+	
+	#Step 2: Calculate the times for each of the schedules and find the lowest time
+	#Step 2.5: Theoretically we should add in the times for the appointments to make sure 
+	#			the schedule is feasible but that can be a future iteration
+	#have an iterator for the min distance and one for the index of the list
+	min_difference = math.inf
+	index_for_min = 0
+	
+	#the full list is a list of lists 
+	#for each sub list we want to calculate the total distance or time and add them up
+	#then determine if it's lower than the current min
+	for i in range(0,len(full_permutation_list)):
+		check_amount = calculate_difference(full_permutation_list[i], lookup_dict,'duration')/60.0
+		if check_amount < min_difference:
+			min_difference = check_amount
+			index_for_min = i
+	
+	#Want to return the schedule for this person per day
+	return full_permutation_list[index_for_min]
 
 def main(data_filename,header==True)
 
