@@ -34,7 +34,7 @@
 The idea of using this solution was such to preserve the order of the locations (only denoted by a latitude and longitude without a unique identifier) and then create an distance matrix for distances between points i and j.  This solution when implemented correctly would save about half of the storage space to be on the magnitude of $\frac{n^2-n}{2}$ instead of $n^2$.Assuming the distance between two points are the same, no matter the direction, we only need to construct
 the upper right half of the matrix denoted $x_{ij}, j>i$.  Also note that the diagonal would always be 0 since a point is always 0 distance from itself and we would not need to store it.  I have implemented a ``list of lists" solution where the wrapping list denotes the row number while the second index is a function of both the row number and the location number.  \\
 
-There are limitations to this approach.  To access the distances between two points, the user would first have to know the order of the locations in the input file which would not necessarily be the easiest to go through.  The current assumed implementation does not have a key or location identifier which could potentially make that lookup easier as well.  In addition, due to the construction of the list of lists, the length of each sublist decreases as the rows increase.  Thus, to access $A[i,j]$ as expected in mathematical notation, the actual lookup would look more like $A[i][(j-1)-i]$ assuming that $i<j$
+There are limitations to this approach.  To access the distances between two points, the user would first have to know the order of the locations in the input file which may not necessarily be easy to navigate.  This implementation does not have a key or location identifier which could potentially make that lookup easier as well.  In addition, due to the construction of the list of lists, the length of each sublist decreases as the rows increase.  Thus, to access $A[i,j]$ as expected in mathematical notation, the actual lookup would look more like $A[i][(j-1)-i]$ assuming that $i<j$ so either a wrapper function would be required or lots of comments explaining the algebra would be included in the code.\\
 
 \subsection{Approach 2: Dictionary Solution V1}
 This idea improves from the first approach of requiring the knowledge of the order of the locations and their indices in the original list.  The major differences between this approach and Approach 1 is that instead of storing the distance matrix as a list of lists, we create one tuple for each possible combination of location pairs. \\
@@ -44,7 +44,12 @@ When accessing the dictionary (done in $O(1)$) the code is easier to interpret s
 \subsection{Approach 3: Dictionary Solution V2}
 This approach is essentially the same as the Dictionary Solution V1 except instead of adding just one tuple to the dictionary as a key, we add both ``versions" of the latitude and longitude order as tuples in the dictionary.  To illustrate, we would add both $(A,B)$ and $(B,A)$ to the dictionary keys.  In this method, to access the distance is still $O(1)$ time but the amount of storage would essentially double from Approach 2.\\
 
-If there was some previously defined location pair convention method such as the location with the lowest value of latitude goes first in the tuple for accessing and storing the dictionary key, then this solution would satisfy both the storage problem and the location pair access problem!
+If there was some previously defined location pair convention method such as the location with the lowest value of latitude goes first in the tuple for accessing and storing the dictionary key, then this solution would satisfy both the storage problem and the location pair access problem!\\
+
+\subsection{Approach 4: Create a Class}
+Another approach that I haven't included the code for yet is to create a class for locations.  This class would have associated attributes that would be easier to access (such as location\_a.latitude) and the code would be easier to read instead of creating multiple lookup tables and having multiple nested lookups from dictionaries.  In addition we could create more definite functions to calculate distance and duration between two locations without passing all the extra pointers and references in.  For instance, all the required information to compute the distance between two locations would flow through from the location object instead of also joining to another location-latitude-longitude lookup table.\\
+
+Another benefit would be if we wanted to illustrate more details of the class such as adding a sales amount to each location, then we can easily add that attribute and access it instead of fully populating and referencing another (potentially large) lookup table.\\
 
 \section{Question 2: Find a Solution for the Schedule}
 \textbf{Goal:} Need to minimize the number of drivers such that all clients are
@@ -54,7 +59,7 @@ such as client service time and travel time are reasonable (full list in problem
 \tikzstyle{block} = [rectangle, draw, 
 text width=50em, text centered, rounded corners, minimum height=4em]
 \tikzstyle{line} = [draw, -latex']
-\begin{tikzpicture}[node distance = 7em, auto]
+\begin{tikzpicture}[node distance = 6em, auto]
 	\centering
 	%blocks
 	\node [block] (init) {Step 1: Assign location delivery day of week based on historical data to be a constraint};

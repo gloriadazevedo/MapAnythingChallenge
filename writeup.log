@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2016.11.18)  10 MAY 2018 22:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2016.11.18)  10 MAY 2018 23:39
 entering extended mode
 **./writeup.tex
 (writeup.tex
@@ -736,6 +736,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
@@ -748,26 +753,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Overfull \hbox (38.36987pt too wide) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--58
+
+ []
+
+
+Overfull \hbox (38.36987pt too wide) in paragraph at lines 76--77
 [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-
- []
-
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
@@ -778,43 +788,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-[3] <hierarchical_clustering_example.png, id=26, 560.0925pt x 553.06625pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+<hierarchical_clustering_example.png, id=26, 560.0925pt x 553.06625pt>
 File: hierarchical_clustering_example.png Graphic file (type png)
 
 <use hierarchical_clustering_example.png>
 Package pdftex.def Info: hierarchical_clustering_example.png used on input line
- 95.
+ 100.
 (pdftex.def)             Requested size: 280.04556pt x 276.53244pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-
- []
-
-
+ [4]
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[4 <./hierarchical_clustering_example.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
@@ -825,11 +835,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-
+[5 <./hierarchical_clustering_example.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
@@ -839,38 +849,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
-[6] (writeup.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+[6] [7] (writeup.aux) ) 
 Here is how much of TeX's memory you used:
- 16427 strings out of 493333
- 342989 string characters out of 3130142
- 407006 words of memory out of 3000000
- 19642 multiletter control sequences out of 15000+200000
+ 16428 strings out of 493333
+ 343007 string characters out of 3130142
+ 408006 words of memory out of 3000000
+ 19643 multiletter control sequences out of 15000+200000
  11672 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,7n,67p,855b,566s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmbx10.pfb><C:/Users/glori/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/glori/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/glori/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users
-/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/Users/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr12.pfb><C:/Users/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb><C:/Users/glori/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/glori/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/glori/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/glori/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/U
-sers/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
-t12.pfb>
-Output written on writeup.pdf (6 pages, 154500 bytes).
+<C:/Users/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/glori/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/glori/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/glori/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/U
+sers/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><C:/Users/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr12.pfb><C:/Users/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr17.pfb><C:/Users/glori/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/glori/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/glori/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/glo
+ri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+C:/Users/glori/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmtt12.pfb>
+Output written on writeup.pdf (7 pages, 156387 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
